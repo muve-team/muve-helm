@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-admin
+  labels:
+    {{- include "muve.labels" . | nindent 4 }}
+    app: muve-admin
+spec:
+  replicas: {{ .Values.admin.replicaCount }}
+  selector:
+    matchLabels:
+      app: muve-admin
+  template:
+    metadata:
+      labels:
+        app: muve-admin
+    spec:
+      containers:
+        - name: admin
+          image: "{{ .Values.admin.image.repository }}:{{ .Values.admin.image.tag }}"
+          imagePullPolicy: {{ .Values.admin.image.pullPolicy }}
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.admin.resources | nindent 12 }}
