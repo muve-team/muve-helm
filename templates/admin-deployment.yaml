@@ -24,3 +24,14 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.admin.resources | nindent 12 }}
+          env:
+            - name: DB_URL
+              value: {{ .Values.global.DB_URL | quote }}
+            - name: DB_USERNAME
+              value: {{ .Values.global.DB_USERNAME | quote }}
+            - name: DB_PASSWORD
+              value: {{ .Values.global.DB_PASSWORD | quote }}
+            - name: AWS_S3_ACCESS_KEY_ID
+              value: {{ .Values.global.AWS_S3_ACCESS_KEY_ID | quote }}
+            - name: AWS_S3_SECRET_ACCESS_KEY
+              value: {{ .Values.global.AWS_S3_SECRET_ACCESS_KEY | quote }}
