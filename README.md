@@ -30,6 +30,8 @@ kubectl apply -k overlays/prod/
 
 3. ArgoCD 배포
 
+클러스터에 Secret을 먼저 적용하려면 ```kubectl apply -f overlays/prod/secrets.yaml```을 적용해야 합니다.
+
 ```bash
 kubectl apply -f application.yaml
 ```
