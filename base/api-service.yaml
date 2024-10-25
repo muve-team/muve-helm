@@ -7,6 +7,6 @@ spec:
     app: muve-api
   ports:
   - port: 80
-    targetPort: {{ .Values.containerPort }}
+    targetPort: 8082
     protocol: TCP
   type: ClusterIP

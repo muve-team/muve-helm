@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: muve-api
+  labels:
+    app: muve-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: muve-api
+  template:
+    metadata:
+      labels:
+        app: muve-api
+    spec:
+      containers:
+      - name: muve-api
+        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8082
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        envFrom:
+        - secretRef:
+            name: muve-api-secrets
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8082
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8082
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
