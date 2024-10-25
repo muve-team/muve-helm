@@ -8,3 +8,10 @@ resources:
 - admin-deployment.yaml
 - admin-service.yaml
 - admin-ingress.yaml
+images:
+- name: muve-admin
+  newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-admin-repo
+  newTag: "116"
+- name: muve-api
+  newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo
+  newTag: "116"
