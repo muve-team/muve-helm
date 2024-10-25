@@ -5,3 +5,11 @@ resources:
 - ../../base
 
 namespace: default
+
+secretGenerator:
+- name: muve-api-secrets
+  envs:
+  - .env.api
+- name: muve-admin-secrets
+  envs:
+  - .env.admin

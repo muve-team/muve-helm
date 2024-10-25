@@ -1,2 +1,1 @@
-# Secrets should not be committed to git
-overlays/prod/secrets.yaml
+overlays/prod/.env*
