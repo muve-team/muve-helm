@@ -3,7 +3,7 @@ containerPort: 8082
 serverPort: 8082
 image:
   repository: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo
-  tag: latest
+  tag: "1"  # 빌드 번호로 시작하도록 설정
 resources:
   requests:
     memory: "512Mi"
