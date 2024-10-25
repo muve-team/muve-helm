@@ -3,7 +3,6 @@ containerPort: 8082
 serverPort: 8082
 image:
   repository: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo
-  tag: latest
 resources:
   requests:
     memory: "512Mi"

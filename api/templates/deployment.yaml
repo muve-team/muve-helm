@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: muve-api
-        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        image: muve-admin:latest
         imagePullPolicy: Always
         ports:
         - containerPort: {{ .Values.containerPort }}

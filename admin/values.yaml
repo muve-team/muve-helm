@@ -3,7 +3,6 @@ containerPort: 8081
 serverPort: 8081
 image:
   repository: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-admin-repo
-  tag: latest
 resources:
   requests:
     memory: "512Mi"
