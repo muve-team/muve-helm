@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: muve-api
+spec:
+  selector:
+    app: muve-api
+  ports:
+  - port: 80
+    targetPort: {{ .Values.containerPort }}
+    protocol: TCP
+  type: ClusterIP

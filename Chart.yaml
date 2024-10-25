@@ -1,7 +1,0 @@
-apiVersion: v2
-name: muve-helm
-description: Helm chart for Muve Admin and API services
-version: 0.1.0
-appVersion: "1.0.0"
-maintainers:
-  - name: Muve Team
