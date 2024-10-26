@@ -9,23 +9,20 @@ spec:
   selector:
     matchLabels:
       app: muve-admin
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
+  # strategy:
+  #   type: RollingUpdate
+  #   rollingUpdate:
+  #     maxSurge: 1
+  #     maxUnavailable: 0
   template:
     metadata:
       labels:
         app: muve-admin
-      annotations:
-        checksum/secrets: ${SECRETS_CHECKSUM}  # 시크릿 변경 감지
-        timestamp: ${TIMESTAMP}  # 강제 롤링 업데이트용
     spec:
       containers:
       - name: muve-admin
         image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-admin-repo
-        imagePullPolicy: Always
+        # imagePullPolicy: Always
         ports:
         - containerPort: 8081
         resources:
