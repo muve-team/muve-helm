@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/muve-team/muve-helm.git'
     targetRevision: HEAD
-    path: overlays/prod
+    path: overlays/prod/muve-api
     kustomize:
       namePrefix: muve-api-
   destination:
@@ -18,8 +18,9 @@ spec:
     automated:
       prune: true
       selfHeal: true
-
+      
 ---
+
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -30,7 +31,7 @@ spec:
   source:
     repoURL: 'https://github.com/muve-team/muve-helm.git'
     targetRevision: HEAD
-    path: overlays/prod
+    path: overlays/prod/muve-admin
     kustomize:
       namePrefix: muve-admin-
   destination:

@@ -5,8 +5,10 @@ resources:
 - api-deployment.yaml
 - api-service.yaml
 - api-ingress.yaml
-- admin-deployment.yaml
-- admin-service.yaml
-- admin-ingress.yaml
-- external-secret.yaml
-- secret-store.yaml
+
+images:
+- name: muve-api
+  newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo
+  newTag: "116"
+
+namespace: default
