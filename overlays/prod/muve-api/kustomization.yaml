@@ -3,6 +3,9 @@ kind: Kustomization
 # metadata:
 #   annotations:
 #     argocd.argoproj.io/sync-options: Replace=true
+# metadata:
+  # annotations:
+  #   argocd.argoproj.io/sync-options: Replace=true
 
 resources:
 - api-deployment.yaml
@@ -14,6 +17,6 @@ resources:
 images:
 - name: muve-api
   newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo
-  newTag: "129"
+  newTag: "133"
 
 namespace: default
