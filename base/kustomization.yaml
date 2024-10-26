@@ -8,6 +8,8 @@ resources:
 - admin-deployment.yaml
 - admin-service.yaml
 - admin-ingress.yaml
+- external-secret.yaml
+
 images:
 - name: muve-admin
   newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-admin-repo
