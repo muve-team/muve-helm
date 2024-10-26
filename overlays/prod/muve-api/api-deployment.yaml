@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: muve-api
-  labels:
-    app: muve-api
+  # labels:
+  #   app: muve-api
 spec:
   replicas: 1
   selector:
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: muve-api
-        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo
+        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo:1
         # imagePullPolicy: Always
         ports:
         - containerPort: 8082
