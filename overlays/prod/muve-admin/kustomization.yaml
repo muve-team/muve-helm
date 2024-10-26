@@ -13,4 +13,7 @@ images:
   newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-admin-repo
   newTag: "127"
 
+commonAnnotations:
+  rollme: "$(date +%s)"  # 모든 리소스에 적용될 annotation
+
 namespace: default
