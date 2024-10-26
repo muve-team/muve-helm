@@ -8,7 +8,6 @@ resources:
 - admin-deployment.yaml
 - admin-service.yaml
 - admin-ingress.yaml
-- external-secret.yaml
 
 images:
 - name: muve-admin
