@@ -14,6 +14,6 @@ resources:
 images:
 - name: muve-admin
   newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-admin-repo
-  newTag: "131"
+  newTag: "133"
 
 namespace: default
