@@ -2,7 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ../../../base
+- ../../../base/api-demolyment.yaml
+- ../../../base/api-ingress.yaml
+- ../../../base/api-service.yaml
 
 images:
 - name: muve-api
