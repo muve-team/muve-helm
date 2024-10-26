@@ -5,6 +5,7 @@ resources:
 - admin-deployment.yaml
 - admin-ingress.yaml
 - admin-service.yaml
+- external-secret.yaml
 - ../../../base
 
 images:
