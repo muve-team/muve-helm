@@ -18,9 +18,6 @@ spec:
     metadata:
       labels:
         app: muve-api
-      annotations:
-        checksum/secrets: ${SECRETS_CHECKSUM}  # 시크릿 변경 감지
-        timestamp: ${TIMESTAMP}  # 강제 롤링 업데이트용
     spec:
       containers:
       - name: muve-api
