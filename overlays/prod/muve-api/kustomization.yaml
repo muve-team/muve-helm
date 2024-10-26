@@ -5,6 +5,7 @@ resources:
 - api-deployment.yaml
 - api-ingress.yaml
 - api-service.yaml
+- api-external-secret.yaml
 - ../../../base
 
 images:

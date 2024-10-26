@@ -5,8 +5,8 @@ resources:
 - admin-deployment.yaml
 - admin-ingress.yaml
 - admin-service.yaml
-- external-secret.yaml
-- secret-store.yaml
+- admin-external-secret.yaml
+- ../../../base
 
 images:
 - name: muve-admin
