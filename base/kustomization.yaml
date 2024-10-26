@@ -2,11 +2,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- muve-api/api-deployment.yaml
-- muve-api/api-service.yaml
-- muve-api/api-ingress.yaml
-- muve-admin/admin-deployment.yaml
-- muve-admin/admin-service.yaml
-- muve-admin/admin-ingress.yaml
-- common/external-secret.yaml
-- common/secret-store.yaml
+- external-secret.yaml
+- secret-store.yaml
