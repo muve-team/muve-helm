@@ -34,7 +34,7 @@ spec:
             cpu: "500m"
         envFrom:
         - secretRef:
-            name: muve-api-secrets
+            name: muve-api-environment-keys
         readinessProbe:
           httpGet:
             path: /actuator/health
