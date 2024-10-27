@@ -12,7 +12,7 @@ resources:
 - api-ingress.yaml
 - api-service.yaml
 - api-external-secret.yaml
-- ../../../base
+- api-secret-store.yaml
 
 images:
 - name: muve-api

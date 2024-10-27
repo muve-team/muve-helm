@@ -9,8 +9,6 @@ spec:
     repoURL: 'https://github.com/muve-team/muve-helm.git'
     targetRevision: HEAD
     path: overlays/prod/muve-api
-    kustomize:
-      namePrefix: muve-api-
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
@@ -18,7 +16,9 @@ spec:
     automated:
       prune: true
       selfHeal: true
-      
+    syncOptions:
+      - CreateNamespace=true
+
 ---
 
 apiVersion: argoproj.io/v1alpha1
@@ -32,8 +32,6 @@ spec:
     repoURL: 'https://github.com/muve-team/muve-helm.git'
     targetRevision: HEAD
     path: overlays/prod/muve-admin
-    kustomize:
-      namePrefix: muve-admin-
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
@@ -41,3 +39,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
