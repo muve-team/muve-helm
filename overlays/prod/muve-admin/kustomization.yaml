@@ -9,7 +9,7 @@ resources:
 - admin-ingress.yaml
 - admin-service.yaml
 - admin-external-secret.yaml
-- ../../../base
+- admin-secret-store.yaml
 
 images:
 - name: muve-admin
