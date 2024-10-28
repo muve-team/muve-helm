@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: muve-admin
-        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-admin-repo:158
+        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-admin-repo:159
         # imagePullPolicy: Always
         ports:
         - containerPort: 8081
