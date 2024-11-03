@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: muve-api
-        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo:183
+        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo:184
         # imagePullPolicy: Always
         ports:
         - containerPort: 8082
