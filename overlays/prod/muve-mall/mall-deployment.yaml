@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: muve-mall
+  # labels:
+  #   app: muve-mall
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: muve-mall
+  # strategy:
+  #   type: RollingUpdate
+  #   rollingUpdate:
+  #     maxSurge: 1
+  #     maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: muve-mall
+    spec:
+      containers:
+      - name: muve-mall
+        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-mall-repo:187
+        # imagePullPolicy: Always
+        ports:
+        - containerPort: 8081
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        envFrom:
+        - secretRef:
+            name: muve-mall-environment-keys
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8081
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8081
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
