@@ -54,7 +54,7 @@ spec:
   source:
     repoURL: https://github.com/muve-team/muve-helm
     targetRevision: main
-    path: overlays/prod
+    path: overlays/prod/muve-mall
   destination:
     namespace: default
     server: https://kubernetes.default.svc
