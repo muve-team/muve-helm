@@ -17,6 +17,6 @@ resources:
 images:
 - name: muve-api
   newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-api-repo
-  newTag: "216"
+  newTag: "217"
 
 namespace: default
