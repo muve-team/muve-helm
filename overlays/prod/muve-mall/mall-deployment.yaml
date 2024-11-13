@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: muve-mall
-        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-mall-repo:224
+        image: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-mall-repo:225
         # imagePullPolicy: Always
         ports:
         - containerPort: 8083

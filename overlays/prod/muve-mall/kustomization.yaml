@@ -14,6 +14,6 @@ resources:
 images:
 - name: muve-mall
   newName: 816208829212.dkr.ecr.ap-northeast-2.amazonaws.com/muve-mall-repo
-  newTag: "224"
+  newTag: "225"
 
 namespace: default
